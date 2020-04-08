@@ -1,0 +1,12 @@
+{{ define "main" }}
+
+<h1>{{ .Title }}</h1>
+
+<p>This it the basic home page. Please click on the link beliow to go to the problem page.</p>
+
+
+      {{ range .Pages }}
+            <a href="{{ .URL }}">{{ .Title }}</a>
+      {{ end }}
+
+{{end}}

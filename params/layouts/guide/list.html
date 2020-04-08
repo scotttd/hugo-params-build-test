@@ -1,0 +1,15 @@
+{{ define "main" }}
+
+<h1>{{ .Title }}</h1>
+
+{{ .Content }}
+The Guide Layout list template ranging through the Groups params.
+
+<ol>
+      {{ with .Params.groups }}
+            {{ range . }}
+                  <li>Name - {{ .name }}</li>
+            {{ end }}
+      {{ end }}
+</ol>
+{{end}}
